@@ -1,22 +1,19 @@
 import time
 
 from DataProcessor import DataProcessor
+from DataPrinter import DataPrinter
 
 start_time = time.time()
 
 
 def main():
-    tasks = []
     for number in range(1, 10):
-        # answer = await DataProcessor(api_url=f'https://jsonplaceholder.typicode.com/todos',
-        #                              number=number).get_answer()
         DataProcessor(api_url=f'https://jsonplaceholder.typicode.com/todos',
                       number=number).get_answer()
-    # ioloop = asyncio.get_event_loop()
-    # wait_tasks = asyncio.wait(tasks)
-    # ioloop.run_until_complete(wait_tasks)
-    # ioloop.close()
-
+        DataPrinter(DataProcessor(api_url=f'https://jsonplaceholder.typicode.com/todos',
+                      number=number).get_answer(),
+                    "C:/Projects/trash",
+                    "test.csv").write_to_csv()
 
 
 if __name__ == "__main__":

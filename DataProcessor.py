@@ -1,10 +1,9 @@
 import requests
-# api_url = "https://jsonplaceholder.typicode.com/todos/1"
-from JsonModel import JsonModel
+import jsonpickle
 
 
 class DataProcessor:
-    def __init__(self, api_url, number):
+    def __init__(self, api_url, number) -> jsonpickle.json:
         self.api_url = api_url
         self.number = str(number)
 
