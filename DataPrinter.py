@@ -1,8 +1,7 @@
 import csv
 
 import jsonpickle
-import os
-import pandas
+
 
 class DataPrinter:
     def __init__(self, json_object: jsonpickle.json, path: str, file_name: str):

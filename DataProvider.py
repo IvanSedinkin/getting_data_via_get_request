@@ -11,8 +11,8 @@ def main():
         DataProcessor(api_url=f'https://jsonplaceholder.typicode.com/todos',
                       number=number).get_answer()
         DataPrinter(DataProcessor(api_url=f'https://jsonplaceholder.typicode.com/todos',
-                      number=number).get_answer(),
-                    "C:/Projects/trash",
+                                  number=number).get_answer(),
+                    "/home/tech/Documents/Tasks/trash",#"C:/Projects/trash",
                     "test.csv").write_to_csv()
 
 
